@@ -463,7 +463,6 @@ const setEyeColor = (hex) => {
   irisTexture.needsUpdate = true
 }
 
-// examples
 setEyeColor("#2a1b12") 
 
 
