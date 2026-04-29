@@ -20,13 +20,10 @@ const Fox = () => {
 
     useThree(({scene,camera ,gl})=>{
 
-          camera.position.z = 0.7;
+      camera.position.z = 0.7;
       gl.toneMapping = THREE.ACESFilmicToneMapping;
-gl.toneMappingExposure = 1.0;
-               
-    gl.colorSpace = THREE.SRGBColorSpace;
-          
-
+      gl.toneMappingExposure = 1.0;            
+      gl.colorSpace = THREE.SRGBColorSpace;
     })
 
 
@@ -331,7 +328,6 @@ useFrame((_, delta) => {
        shader.uniforms.uMatcapTexture2 = material.current.uMatcap2; 
        shader.uniforms.uProgress = material.current.uProgress; 
 
-       // Store reference to shader uniforms for GSAP animation
 
         shader.fragmentShader = shader.fragmentShader.replace(
             "void main() {",
